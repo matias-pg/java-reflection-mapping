@@ -1,9 +1,9 @@
-package dev.matiaspg.reflectionmapping.utils.reflectionmapper.mapper;
+package dev.matiaspg.reflectionmapping.service.reflectionmapper.mapper;
 
 import java.lang.reflect.Field;
 
 import dev.matiaspg.reflectionmapping.dto.FormField;
-import dev.matiaspg.reflectionmapping.utils.reflectionmapper.annotation.FieldMeta;
+import dev.matiaspg.reflectionmapping.service.reflectionmapper.annotation.FieldMeta;
 
 /**
  * Represents a mapper that maps a class {@code Field} into a {@code FormField}.

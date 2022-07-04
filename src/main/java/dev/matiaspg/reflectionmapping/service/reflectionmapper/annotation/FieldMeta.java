@@ -1,4 +1,4 @@
-package dev.matiaspg.reflectionmapping.utils.reflectionmapper.annotation;
+package dev.matiaspg.reflectionmapping.service.reflectionmapper.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

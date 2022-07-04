@@ -5,8 +5,8 @@ import java.util.Map;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import dev.matiaspg.reflectionmapping.utils.reflectionmapper.mapper.FieldMapper;
-import dev.matiaspg.reflectionmapping.utils.reflectionmapper.mapper.StringMapper;
+import dev.matiaspg.reflectionmapping.service.reflectionmapper.mapper.FieldMapper;
+import dev.matiaspg.reflectionmapping.service.reflectionmapper.mapper.StringMapper;
 
 @Configuration
 public class FormFieldMappers {

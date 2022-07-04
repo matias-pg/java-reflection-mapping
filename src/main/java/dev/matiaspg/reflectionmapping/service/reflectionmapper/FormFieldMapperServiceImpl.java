@@ -1,4 +1,4 @@
-package dev.matiaspg.reflectionmapping.utils.reflectionmapper;
+package dev.matiaspg.reflectionmapping.service.reflectionmapper;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
@@ -11,8 +11,8 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Component;
 
 import dev.matiaspg.reflectionmapping.dto.FormField;
-import dev.matiaspg.reflectionmapping.utils.reflectionmapper.annotation.FieldMeta;
-import dev.matiaspg.reflectionmapping.utils.reflectionmapper.mapper.FieldMapper;
+import dev.matiaspg.reflectionmapping.service.reflectionmapper.annotation.FieldMeta;
+import dev.matiaspg.reflectionmapping.service.reflectionmapper.mapper.FieldMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import dev.matiaspg.reflectionmapping.utils.reflectionmapper.annotation.FieldMeta;
+import dev.matiaspg.reflectionmapping.service.reflectionmapper.annotation.FieldMeta;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
