@@ -1,9 +1,9 @@
 package dev.matiaspg.reflectionmapping.service;
 
-import java.util.List;
-
-import dev.matiaspg.reflectionmapping.dto.FormField;
+import dev.matiaspg.reflectionmapping.fieldmapping.MappedFormField;
 import dev.matiaspg.reflectionmapping.model.Todo;
+
+import java.util.List;
 
 public interface TodoService {
     List<Todo> findAll();
@@ -11,10 +11,10 @@ public interface TodoService {
     Todo findById(Integer id);
 
     /**
-     * Get a {@code List} of {@code FormFields} containing the values of a
-     * {@code Todo}.
+     * Get a {@link List} of {@link MappedFormField}s containing the values of a
+     * {@link Todo}.
      */
-    List<FormField> findFormFieldsForId(Integer id);
+    List<MappedFormField> findFormFieldsForId(Integer id);
 
     Todo save(Todo todo);
 

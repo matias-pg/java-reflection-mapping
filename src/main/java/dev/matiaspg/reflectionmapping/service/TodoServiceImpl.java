@@ -1,21 +1,20 @@
 package dev.matiaspg.reflectionmapping.service;
 
-import java.util.List;
-
-import org.springframework.stereotype.Service;
-
-import dev.matiaspg.reflectionmapping.dto.FormField;
 import dev.matiaspg.reflectionmapping.exception.NotFoundException;
+import dev.matiaspg.reflectionmapping.fieldmapping.FormFieldMapper;
+import dev.matiaspg.reflectionmapping.fieldmapping.MappedFormField;
 import dev.matiaspg.reflectionmapping.model.Todo;
 import dev.matiaspg.reflectionmapping.repository.TodoRepository;
-import dev.matiaspg.reflectionmapping.service.reflectionmapper.FormFieldMapperService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class TodoServiceImpl implements TodoService {
     private final TodoRepository repository;
-    private final FormFieldMapperService mapperService;
+    private final FormFieldMapper formFieldMapper;
 
     @Override
     public List<Todo> findAll() {
@@ -29,9 +28,9 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
-    public List<FormField> findFormFieldsForId(Integer id) {
+    public List<MappedFormField> findFormFieldsForId(Integer id) {
         var todo = findById(id);
-        return mapperService.toFormFields(todo);
+        return formFieldMapper.toFormFields(todo);
     }
 
     @Override

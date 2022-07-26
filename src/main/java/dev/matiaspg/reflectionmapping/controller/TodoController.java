@@ -1,20 +1,12 @@
 package dev.matiaspg.reflectionmapping.controller;
 
-import java.util.List;
-
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import dev.matiaspg.reflectionmapping.dto.FormField;
+import dev.matiaspg.reflectionmapping.fieldmapping.MappedFormField;
 import dev.matiaspg.reflectionmapping.model.Todo;
 import dev.matiaspg.reflectionmapping.service.TodoService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/todos")
@@ -33,11 +25,11 @@ public class TodoController {
     }
 
     /**
-     * Get a {@code List} of {@code FormFields} containing the values of a
-     * {@code Todo}.
+     * Get a {@link List} of {@link MappedFormField}s containing the values of a
+     * {@link Todo}.
      */
     @GetMapping("/{id}/form-fields")
-    public List<FormField> findFormFieldsForId(@PathVariable Integer id) {
+    public List<MappedFormField> findFormFieldsForId(@PathVariable Integer id) {
         return service.findFormFieldsForId(id);
     }
 
