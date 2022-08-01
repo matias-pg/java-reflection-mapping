@@ -103,8 +103,8 @@ public class TodoFormFieldMapper {
 
 Although this approach worked, it had some issues.
 
-First, **it was too easy to make a mistake**. Considering there were 500+ fields that had to be mapped, it was easy to make
-a mistake like this:
+First, **it was too easy to make a mistake**. Considering there were 500+ fields that had to be mapped, it was easy to
+make a mistake like this:
 
 ```java
 public class TodoFormFieldMapper {
@@ -120,15 +120,15 @@ public class TodoFormFieldMapper {
 ```
 
 Even though those mistakes could be easily found with a regular expression like
-this: `\w+Field\(\s*"\w([^"]+)",\s*\w+\.get\w(?:(?!\1).)+,`, we shouldn't have to do that, since **it shouldn't** be that
-easy to make a mistake.
+this: `\w+Field\(\s*"\w([^"]+)",\s*\w+\.get\w(?:(?!\1).)+,`, we shouldn't have to do that, since **it shouldn't** be
+that easy to make a mistake.
 
-Second, **there's too much code repetition**, with all that entails (like the previous issue). We already know the type and
-the name of each field of an entity, since we defined them in the entity itself, and we can easily get the value of a
-field by using Reflection. The only thing we need is the `label`.
+Second, **there's too much code repetition**, with all that entails (like the previous issue). We already know the type
+and the name of each field of an entity, since we defined them in the entity itself, and we can easily get the value of
+a field by using Reflection. The only thing we need is the `label`.
 
-And third, **that's a lot of code**! Do we really have to create a mapping class for each of those 50+ entities? I did, but
-I shouldn't have.
+And third, **that's a lot of code**! Do we really have to create a mapping class for each of those 50+ entities? I did,
+but I shouldn't have.
 
 As some say, you should work smarter, not harder. I made the mistake of working harder, so I was curious about the
 "smarter" solution. And although it could still be improved, this is my "smarter" solution.
