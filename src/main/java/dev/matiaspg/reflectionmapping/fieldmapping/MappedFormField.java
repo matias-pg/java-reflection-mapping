@@ -16,7 +16,7 @@ import lombok.Data;
 public class MappedFormField {
     private String name;
     private String type;
-    private boolean readOnly;
-    private String label;
     private Object value;
+    private String label;
+    private Boolean readOnly;
 }
